@@ -1,26 +1,39 @@
 import React from "react";
 import PropTypes from "prop-types";
+import pints from "./../img/pints.png";
 
 function Keg(props){
   return (
     <React.Fragment>
       <div onClick = {() => props.whenKegClicked(props.id)}>
-        <h3>{props.name}</h3>
-        <h4>{props.style}</h4>
-        <h4>{props.abv}</h4>
-        <h4>{props.price}</h4>
-        <h4>{props.remainingPints}</h4>
-        <hr/>
+        <div className="flex items-center justify-center">
+          <div className="max-w-sm rounded overflow-hidden shadow-lg mt-2 mb-2">
+            <div className="flex items-center justify-center">
+              <img className="h-24" src={pints} alt="pints of beer" />
+              <br/>
+            </div>
+            <div className="px-6 py-4">
+              <div className="text-center text-gray-700 text-base">
+                <h3>Beer Name: {props.name}</h3>
+                <h4>Beer Style: {props.style}</h4>
+                <h4>ABV: {props.abv}%</h4>
+                <h4>Price $: {props.price}</h4>
+                <h4>Remaining Pints: {props.remainingPints}</h4>
+                <hr/>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </React.Fragment>
   );
 }
 
-Ticket.propTypes = {
+Keg.propTypes = {
   name: PropTypes.string,
   style: PropTypes.string,
-  abv: PropTypes.number,
-  price: PropTypes.number,
+  abv: PropTypes.string,
+  price: PropTypes.string,
   remainingPints: PropTypes.number,
   id: PropTypes.string,
   whenKegClicked: PropTypes.func
