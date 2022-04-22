@@ -1,6 +1,7 @@
 import React from 'react';
 import KegList from './KegList';
 import NewKegForm from './NewKegForm';
+import KegDetail from './KegDetail';
 
 class KegControl extends React.Component {
 
@@ -36,22 +37,28 @@ class KegControl extends React.Component {
     this.setState({selectedKeg: selectedKeg});
   }
 
+  handleSellingPint = (id) => {
+    const selectedKeg = this.state.mainKegList.filter(keg => keg.id === id[0];
+      )
+  }
+
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
-    // if (this.state.selectedKeg != null) {
-    //   currentlyVisibleState = <KegDetail keg = {this.state.selectedKeg} />
-    //   buttonText = "Return to Keg List";
-    if (this.state.formVisibleOnPage) {
+    if (this.state.selectedKeg != null) {
+      currentlyVisibleState = <KegDetail keg = {this.state.selectedKeg} />
+      buttonText = "Return to Keg List";
+    } else if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />
       buttonText = "Return To Keg List";
     } else {
-      currentlyVisibleState = <KegList kegList={this.state.mainKegList} onKegSelection={this.handleChangingSelectedKeg} />
+      currentlyVisibleState = <KegList kegList={this.state.mainKegList} onKegSelection={this.handleChangingSelectedKeg} onSellPint={this.state.handleSellingPint}/>
       buttonText = "Add Keg";
     }
     return (
       <React.Fragment>
         {currentlyVisibleState}
+        <br></br>
         <div className="flex justify-center">  
           <button className="bg-yellow-500 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded-full" onClick={this.handleClick}>{buttonText}</button>
         </div>

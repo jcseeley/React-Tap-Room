@@ -16,11 +16,11 @@ function ReusableForm(props) {
               name='style'
               placeholder='Beer Style' />
             <input className="shadow appearance-none border rounded w-full py-2 px-3 text-center leading-tight focus:outline-none focus:shadow-outline mb-2"
-              type='number'
+              type='text'
               name='abv'
               placeholder='ABV' />
             <input className="shadow appearance-none border rounded w-full py-2 px-3 text-center leading-tight focus:outline-none focus:shadow-outline mb-2"
-              type='number'
+              type='text'
               name='price'
               placeholder='Pint Price' />
             <div className="flex justify-center">
