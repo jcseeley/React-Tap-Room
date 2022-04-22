@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from 'react';
 import PropTypes from "prop-types";
 import pints from "./../img/pints.png";
 
 function Keg(props){
+  const [pintCount, setPintCount] = useState(124);
   return (
     <React.Fragment>
       <div className="flex items-center justify-center">
@@ -15,13 +16,13 @@ function Keg(props){
                 <h4>Beer Style: {props.style}</h4>
                 <h4>ABV: {props.abv}%</h4>
                 <h4>Price: ${props.price}</h4>
-                <h4>Remaining Pints: {props.remainingPints}</h4>
+                <h4>Remaining Pints: {pintCount}</h4>
                 <hr/>
                 <br></br>
               </div>
             </div>
             <div className="flex items-center justify-center">
-              <button className="bg-yellow-500 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded-full" onClick={() => props.sellPint(props.id)}>Sell Pint</button>
+              <button className="bg-yellow-500 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded-full" onClick={() => setPintCount(pintCount - 1)}>Sell Pint</button>
             </div>
           </div>
         </div>
@@ -37,7 +38,8 @@ Keg.propTypes = {
   price: PropTypes.string,
   remainingPints: PropTypes.number,
   id: PropTypes.string,
-  whenKegClicked: PropTypes.func
+  whenKegClicked: PropTypes.func,
+  sellPint: PropTypes.func
 };
 
 export default Keg;
