@@ -10,8 +10,7 @@ class KegControl extends React.Component {
     this.state = {
       formVisibleOnPage: false,
       mainKegList: [],
-      selectedKeg: null,
-      pintCount: null
+      selectedKeg: null
     };
   }
 
@@ -51,6 +50,7 @@ class KegControl extends React.Component {
       currentlyVisibleState = <KegList kegList={this.state.mainKegList} onKegSelection={this.handleChangingSelectedKeg} />
       buttonText = "Add Keg";
     }
+
     return (
       <React.Fragment>
         {currentlyVisibleState}
