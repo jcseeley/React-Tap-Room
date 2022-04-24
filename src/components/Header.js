@@ -5,11 +5,11 @@ function Header(){
   return (
     <React.Fragment>
       <div className="flex items-center justify-center">
-        <img className="h-52" src={pints} alt="Pints of beer" />
+        <img className="h-60" src={pints} alt="Pints of beer" />
       </div>
-      <hr />
-      <h1 className="text-center font-medium leading-tight text-4xl mt-2 mb-2">Keg Manager</h1>
-      <hr />
+      <div className="flex items-center justify-center">
+      <img src="https://fontmeme.com/permalink/220424/ce50ff9d9cfc3aaa15b7569afff031ae.png" alt="Tap Roon text" />
+      </div>
     </React.Fragment>
   );
 }
