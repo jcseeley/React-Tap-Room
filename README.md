@@ -25,7 +25,6 @@ A React app which allows you to view and manage the keg inventory in your tap ro
 * Clone this repository to your desktop.
 * Navigate to the top level of the directory in your terminal.
 * Run "npm install" to install dependencies.
-* Run "npm build" to build the project.
 * Run "npm start" to open the dev server.
 
 ## Component Diagram
