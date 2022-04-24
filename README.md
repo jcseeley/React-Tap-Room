@@ -1,3 +1,47 @@
+# Tap Room
+
+#### By Jase Seeley
+
+#### Epicodus Week #16 Independent Code Review: React Fundamentals  
+* View and manage the beer kegs in your tap room.
+
+![Tap Room Site Preview] (./TapRoom.png)
+
+## Technologies Used
+* create-react-app
+* JavaScript
+* React
+* Webpack
+* HTML
+* CSS
+* Tailwind
+
+## Description
+
+A React app which allows you to view and manage the keg inventory in your tap room. Click the "Sell Pint" button to deduct a pint from the remaining inventory. Click on a beer card to view that beer's detail page and edit or delete keg information. Click the "Add Keg" button to add a new keg to your inventory.
+
+## Setup/Installation Requirements
+
+* Clone this repository to your desktop.
+* Navigate to the top level of the directory in your terminal.
+* Run "npm install" to install dependencies.
+* Run "npm build" to build the project.
+* Run "npm start" to open the dev server.
+
+## Component Diagram
+
+![Tap Room Component Diagram] (./TapRoomDiagram.png)
+
+## Known Bugs
+
+* No known bugs at this time.
+
+## License
+
+MIT
+
+Copyright (c) 2022 Jase Seeley 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

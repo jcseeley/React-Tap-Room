@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  cursor: url("./img/beerCursor.png") 15 15, pointer;
+}
 body {
   background-image: url("./img/beerBackground.webp");
   margin: 0;
@@ -10,6 +13,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+button:hover {
+  cursor: url("./img/beerCursor.png") 15 15, pointer;
 }
 
 code {
