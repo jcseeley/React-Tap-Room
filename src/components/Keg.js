@@ -6,22 +6,21 @@ function Keg(props){
   return (
     <React.Fragment>
       <div className="flex items-center justify-center">
-        <div className="max-w-sm rounded overflow-hidden shadow-lg mt-2 mb-2">
+        <div className="max-w-sm rounded overflow-hidden shadow-lg mt-2 mb-1">
           <div className="px-6 py-4">
             <div onClick = {() => props.whenKegClicked(props.id)}>
               <img className="h-24" src={pints} alt="pints of beer" />
               <div className="text-center text-gray-700 text-base">
-                <h3>Beer Name: {props.name}</h3>
-                <h4>Beer Style: {props.style}</h4>
+                <h3>Beer: {props.name}</h3>
+                <h4>Style: {props.style}</h4>
                 <h4>ABV: {props.abv}%</h4>
                 <h4>Price: ${props.price}</h4>
                 <h4>Remaining Pints: {props.remainingPints}</h4>
                 <hr/>
-                <br></br>
               </div>
             </div>
             <div className="flex items-center justify-center">
-              <button className="bg-yellow-500 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded-full" >Sell Pint</button>
+              <button className="bg-yellow-500 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded-full mt-2" onClick={() => props.whenSellPintClicked(props.id) }>Sell Pint</button>
             </div>
           </div>
         </div>

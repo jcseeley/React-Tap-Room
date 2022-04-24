@@ -2,6 +2,7 @@ import React from 'react';
 import KegList from './KegList';
 import NewKegForm from './NewKegForm';
 import KegDetail from './KegDetail';
+import EditKegForm from './EditKegForm';
 
 class KegControl extends React.Component {
 
@@ -10,7 +11,8 @@ class KegControl extends React.Component {
     this.state = {
       formVisibleOnPage: false,
       mainKegList: [],
-      selectedKeg: null
+      selectedKeg: null,
+      editing: false
     };
   }
 
@@ -18,7 +20,8 @@ class KegControl extends React.Component {
     if (this.state.selectedKeg != null) {
       this.setState({
         formVisibleOnPage: false,
-        selectedKeg: null
+        selectedKeg: null,
+        editing: false
       });
     } else {
       this.setState(prevState => ({
@@ -37,26 +40,62 @@ class KegControl extends React.Component {
     this.setState({selectedKeg: selectedKeg});
   }
 
+  handleSellingPint = (id) => {
+    const kegSellingPint = this.state.mainKegList.filter(keg => keg.id === id)[0];
+    const editedKeg = {...kegSellingPint, remainingPints: kegSellingPint.remainingPints - 1};
+    const editedMainKegList = this.state.mainKegList
+      .filter(keg => keg.id !== id)
+      .concat(editedKeg);
+    this.setState({
+      mainKegList: editedMainKegList
+    });
+  }
+
+  handleEditClick = () => {
+    this.setState({editing: true});
+  }
+
+  handleEditingKeg = (kegToEdit) => {
+    const editedMainKegList = this.state.mainKegList
+      .filter(keg => keg.id !== this.state.selectedKeg.id)
+      .concat(kegToEdit);
+    this.setState({
+        mainKegList: editedMainKegList,
+        editing: false,
+        selectedKeg: null
+      });
+  }
+
+  handleDeletingKeg = (id) => {
+    const newMainKegList = this.state.mainKegList.filter(keg => keg.id !== id);
+    this.setState({
+      mainKegList: newMainKegList,
+      selectedKeg: null
+    });
+  }
+
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
-    if (this.state.selectedKeg != null) {
-      currentlyVisibleState = <KegDetail keg = {this.state.selectedKeg} />
+    if (this.state.editing) {
+      currentlyVisibleState = <EditKegForm keg = {this.state.selectedKeg} onEditKeg = {this.handleEditingKeg} />
+      buttonText = "Return to Keg List";
+    } else if (this.state.selectedKeg != null) {
+      currentlyVisibleState = <KegDetail keg = {this.state.selectedKeg} onClickingDelete= {this.handleDeletingKeg} onClickingEdit= {this.handleEditClick} />
       buttonText = "Return to Keg List";
     } else if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />
       buttonText = "Return To Keg List";
     } else {
-      currentlyVisibleState = <KegList kegList={this.state.mainKegList} onKegSelection={this.handleChangingSelectedKeg} />
+      currentlyVisibleState = <KegList kegList={this.state.mainKegList} onKegSelection={this.handleChangingSelectedKeg} onSellingPint={this.handleSellingPint}/>
       buttonText = "Add Keg";
     }
 
     return (
       <React.Fragment>
         {currentlyVisibleState}
-        <br></br>
         <div className="flex justify-center">  
-          <button className="bg-yellow-500 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded-full" onClick={this.handleClick}>{buttonText}</button>
+          <button className="bg-yellow-500 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded-full mt-2" onClick={this.handleClick}>{buttonText}</button>
         </div>
       </React.Fragment>
     );
