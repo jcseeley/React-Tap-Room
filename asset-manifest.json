@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/React-Tap-Room/static/css/main.7e3c8f0d.css",
-    "main.js": "/React-Tap-Room/static/js/main.2f4c772b.js",
+    "main.js": "/React-Tap-Room/static/js/main.9aee9f5a.js",
     "static/js/787.477a4ac6.chunk.js": "/React-Tap-Room/static/js/787.477a4ac6.chunk.js",
     "static/media/full.png": "/React-Tap-Room/static/media/full.d4c381379fe1ef63279e.png",
     "static/media/quarter.png": "/React-Tap-Room/static/media/quarter.d62f5272d327120c4a09.png",
@@ -11,11 +11,11 @@
     "static/media/half.png": "/React-Tap-Room/static/media/half.a0ed4901d73ccd71631d.png",
     "index.html": "/React-Tap-Room/index.html",
     "main.7e3c8f0d.css.map": "/React-Tap-Room/static/css/main.7e3c8f0d.css.map",
-    "main.2f4c772b.js.map": "/React-Tap-Room/static/js/main.2f4c772b.js.map",
+    "main.9aee9f5a.js.map": "/React-Tap-Room/static/js/main.9aee9f5a.js.map",
     "787.477a4ac6.chunk.js.map": "/React-Tap-Room/static/js/787.477a4ac6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7e3c8f0d.css",
-    "static/js/main.2f4c772b.js"
+    "static/js/main.9aee9f5a.js"
   ]
 }
