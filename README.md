@@ -5,7 +5,7 @@
 #### Epicodus Week #16 Independent Code Review: React Fundamentals  
 * View and manage the beer kegs in your tap room.
 
-![Tap Room Site Preview] (./TapRoom.png)
+![Tap Room Site Preview](./TapRoom.png)
 
 ## Technologies Used
 * create-react-app
@@ -30,7 +30,7 @@ A React app which allows you to view and manage the keg inventory in your tap ro
 
 ## Component Diagram
 
-![Tap Room Component Diagram] (./TapRoomDiagram.png)
+![Tap Room Component Diagram](./TapRoomDiagram.png)
 
 ## Known Bugs
 
