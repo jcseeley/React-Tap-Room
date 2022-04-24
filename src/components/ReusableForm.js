@@ -10,19 +10,19 @@ function ReusableForm(props) {
             <input className=" border-2 border-solid border-yellow-900 shadow appearance-none border rounded w-full py-2 px-3 text-center leading-tight focus:outline-none focus:shadow-outline mb-2"
               type='text'
               name='name'
-              placeholder='Beer Name' />
+              placeholder='Beer Name' required/>
             <input className="border-2 border-solid border-yellow-900 shadow appearance-none border rounded w-full py-2 px-3 text-center leading-tight focus:outline-none focus:shadow-outline mb-2"
               type='text'
               name='style'
-              placeholder='Beer Style' />
+              placeholder='Beer Style' required/>
             <input className="border-2 border-solid border-yellow-900 shadow appearance-none border rounded w-full py-2 px-3 text-center leading-tight focus:outline-none focus:shadow-outline mb-2"
               type='text'
               name='abv'
-              placeholder='ABV' />
+              placeholder='ABV' required/>
             <input className="border-2 border-solid border-yellow-900 shadow appearance-none border rounded w-full py-2 px-3 text-center leading-tight focus:outline-none focus:shadow-outline mb-2"
               type='text'
               name='price'
-              placeholder='Pint Price' />
+              placeholder='Pint Price' required/>
             <div className="flex justify-center">
               <button className="border-2 border-solid border-yellow-800 bg-yellow-400 hover:bg-yellow-300 text-yellow-900 font-bold py-2 px-4 rounded-full" type='submit'>{props.buttonText}</button>
             </div>
