@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/React-Tap-Room/static/css/main.7e3c8f0d.css",
-    "main.js": "/React-Tap-Room/static/js/main.9aee9f5a.js",
+    "main.css": "/React-Tap-Room/static/css/main.cc5382e7.css",
+    "main.js": "/React-Tap-Room/static/js/main.9f8a0751.js",
     "static/js/787.477a4ac6.chunk.js": "/React-Tap-Room/static/js/787.477a4ac6.chunk.js",
     "static/media/full.png": "/React-Tap-Room/static/media/full.d4c381379fe1ef63279e.png",
     "static/media/quarter.png": "/React-Tap-Room/static/media/quarter.d62f5272d327120c4a09.png",
@@ -10,12 +10,12 @@
     "static/media/kicked.png": "/React-Tap-Room/static/media/kicked.ea85b4fc781ec9be4a90.png",
     "static/media/half.png": "/React-Tap-Room/static/media/half.a0ed4901d73ccd71631d.png",
     "index.html": "/React-Tap-Room/index.html",
-    "main.7e3c8f0d.css.map": "/React-Tap-Room/static/css/main.7e3c8f0d.css.map",
-    "main.9aee9f5a.js.map": "/React-Tap-Room/static/js/main.9aee9f5a.js.map",
+    "main.cc5382e7.css.map": "/React-Tap-Room/static/css/main.cc5382e7.css.map",
+    "main.9f8a0751.js.map": "/React-Tap-Room/static/js/main.9f8a0751.js.map",
     "787.477a4ac6.chunk.js.map": "/React-Tap-Room/static/js/787.477a4ac6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7e3c8f0d.css",
-    "static/js/main.9aee9f5a.js"
+    "static/css/main.cc5382e7.css",
+    "static/js/main.9f8a0751.js"
   ]
 }
