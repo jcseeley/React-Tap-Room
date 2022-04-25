@@ -43,7 +43,15 @@ class KegControl extends React.Component {
           price: '7',
           remainingPints: 1,
           id: v4()
-        }
+        },
+        {
+          name: 'Founders BCBS',
+          style: 'BBA Stout',
+          abv: '13.5',
+          price: '11',
+          remainingPints: 85,
+          id: v4()
+        },
       ],
       selectedKeg: null,
       editing: false
@@ -133,7 +141,7 @@ class KegControl extends React.Component {
       <React.Fragment>
         {currentlyVisibleState}
         <div className="flex justify-center">  
-          <button className="border-2 border-solid border-yellow-900 bg-yellow-800 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded-full mt-2" onClick={this.handleClick}>{buttonText}</button>
+          <button className="border-2 border-solid border-yellow-900 bg-yellow-800 hover:bg-yellow-700 text-white font-bold py-2 px-10 rounded-full mt-2" onClick={this.handleClick}>{buttonText}</button>
         </div>
       </React.Fragment>
     );

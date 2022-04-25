@@ -6,7 +6,7 @@ function KegList(props){
 
   return (
     <React.Fragment>
-      <div className="grid grid-cols-4">
+      <div className="grid grid-cols-5">
         {props.kegList.map((keg) =>
           <Keg
             whenKegClicked = { props.onKegSelection }
